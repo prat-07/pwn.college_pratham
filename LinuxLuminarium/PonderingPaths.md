@@ -3,7 +3,7 @@
 ## The Root
 Invoke the `pwn` program using the absolute path and capture the flag.
 ### Solve
-**Flag:** `pwn.college{sTMkxizDOnV4Kro1P8Eik_y1K7Q.QX4cTO0wyNyAzNzEzW}`
+**Flag:** `pwn.college{sTMkxizDOnV4Kro1P8Eik_y1K7Q.QX4cTO0wyNyAzNzEzW}`<br>
 Typed `/pwn` in the terminal since any path starting with `/` signifies an absolute path.
 ```
 hacker@paths~the-root:~$ /pwn
@@ -16,7 +16,7 @@ pwn.college{sTMkxizDOnV4Kro1P8Eik_y1K7Q.QX4cTO0wyNyAzNzEzW}
 ## Program and Absolute Paths
 Execute the `run` file that is in the `challenge` directory, which is, in turn, in the `/` directory.
 ### Solve
-**Flag:** `pwn.college{wZuWje4u0M1rK3Rm4BEwvgSrsDL.QX1QTN0wyNyAzNzEzW}`
+**Flag:** `pwn.college{wZuWje4u0M1rK3Rm4BEwvgSrsDL.QX1QTN0wyNyAzNzEzW}`<br>
 As specified, I ran the command `/challenge/run` in the terminal.
 ```
 hacker@paths~program-and-absolute-paths:~$ /challenge/run
@@ -29,7 +29,7 @@ pwn.college{wZuWje4u0M1rK3Rm4BEwvgSrsDL.QX1QTN0wyNyAzNzEzW}
 ## Position Thyself
 Execute the `/challenge/run` program from a specific path. `cd` into the path before re-running the command.
 ### Solve
-**Flag:** `pwn.college{oDlRA0h-Ntv-b3x9Y20cxc1bPLJ.QX2QTN0wyNyAzNzEzW}`
+**Flag:** `pwn.college{oDlRA0h-Ntv-b3x9Y20cxc1bPLJ.QX2QTN0wyNyAzNzEzW}`<br>
 After running the `/challenge/run` command I was prompted the path `/usr/aarch64-linux-gnu/include/gnu`. After `cd`ing into it, I re-ran the `/challenge/run` command.
 ```
 hacker@paths~position-thy-self:~$ /challenge/run
@@ -48,7 +48,7 @@ pwn.college{oDlRA0h-Ntv-b3x9Y20cxc1bPLJ.QX2QTN0wyNyAzNzEzW}
 ## Position Elsewhere
 Execute the `/challenge/run` program from a specific path. `cd` into the path before re-running the command.
 ### Solve
-**Flag:** `pwn.college{E7E93sSSCTRS8Ie__V7jvzwpKA7.QX3QTN0wyNyAzNzEzW}`
+**Flag:** `pwn.college{E7E93sSSCTRS8Ie__V7jvzwpKA7.QX3QTN0wyNyAzNzEzW}`<br>
 After running the `/challenge/run` command I was prompted the path `/var/lib/apt/lists`. After `cd`ing into it, I re-ran the `/challenge/run` command.
 ```
 hacker@paths~position-elsewhere:~$ /challenge/run
@@ -67,7 +67,7 @@ pwn.college{E7E93sSSCTRS8Ie__V7jvzwpKA7.QX3QTN0wyNyAzNzEzW}
 ## Position Yet Elsewhere
 Execute the `/challenge/run` program from a specific path. `cd` into the path before re-running the command.
 ### Solve
-**Flag:** `pwn.college{gGhKjEHP6UVsHv_piVuIydJxKwo.QX4QTN0wyNyAzNzEzW}`
+**Flag:** `pwn.college{gGhKjEHP6UVsHv_piVuIydJxKwo.QX4QTN0wyNyAzNzEzW}`<br>
 After running the `/challenge/run` command I was prompted the path `/proc/138/fd`. After `cd`ing into it, I re-ran the `/challenge/run` command.
 ```
 hacker@paths~position-yet-elsewhere:~$ /challenge/run
@@ -86,7 +86,7 @@ pwn.college{gGhKjEHP6UVsHv_piVuIydJxKwo.QX4QTN0wyNyAzNzEzW}
 ## Implicit Relative Paths, from /
 Run the `/challenge/run` command using a relative path while having a current directory of `/`.
 ### Solve
-**Flag:** `pwn.college{cb3tOCaHssUEjqhYWAKuFPHJ6pa.QX5QTN0wyNyAzNzEzW}`
+**Flag:** `pwn.college{cb3tOCaHssUEjqhYWAKuFPHJ6pa.QX5QTN0wyNyAzNzEzW}`<br>
 After running the `/challenge/run` command I was prompted to go to the `root` directory. And since, I am already in the root directory, I can simply use the relative path to run the `run` command using `challenge/run`.
 ```
 hacker@paths~implicit-relative-paths-from-:~$ /challenge/run
@@ -105,7 +105,7 @@ pwn.college{cb3tOCaHssUEjqhYWAKuFPHJ6pa.QX5QTN0wyNyAzNzEzW}
 ## Explicit Relative Paths, from /
 Using `.` in the relative path.
 ### Solve
-**Flag:** `pwn.college{MEc5o1rkId5S8XSwwePbp9Sqt7j.QXwUTN0wyNyAzNzEzW}`
+**Flag:** `pwn.college{MEc5o1rkId5S8XSwwePbp9Sqt7j.QXwUTN0wyNyAzNzEzW}`<br>
 `.` is an alias for the current directory.
 ```
 hacker@paths~explicit-relative-paths-from-:~$ /challenge/run
@@ -130,7 +130,7 @@ pwn.college{MEc5o1rkId5S8XSwwePbp9Sqt7j.QXwUTN0wyNyAzNzEzW}
 ## Implicit Relative Path
 Run the `/challenge/run` command from `/challenge` directory using `./`.
 ### Solve
-**Flag:** `pwn.college{8KCQhMaIiL_mhyqfEPlxYC2fLcC.QXxUTN0wyNyAzNzEzW}`
+**Flag:** `pwn.college{8KCQhMaIiL_mhyqfEPlxYC2fLcC.QXxUTN0wyNyAzNzEzW}`<br>
 Since running a command, runs it globally, to run the `run` command inside the `/challenge/` folder, I need to explicitly mention that I need to run the `run` command which is inside the mentioned directory using the `./` alias.
 ```
 hacker@paths~implicit-relative-path:~$ /challenge/run
@@ -155,7 +155,7 @@ Execute the `/challenge/run` with a path provided. It will copy the flag to that
 - The path must be inside the `home` directory.
 - The path must be exactly *3 characters* long.
 ### Solve
-**Flag:** `pwn.college{47mBbjcnObwcMkr-B2E6EQtQWgw.QXzMDO0wyNyAzNzEzW}`
+**Flag:** `pwn.college{47mBbjcnObwcMkr-B2E6EQtQWgw.QXzMDO0wyNyAzNzEzW}`<br>
 Executed the command `/challenge/run ~/~`.\
 `~` is an alias for `/home/<user-name>` directory (and since the path starts from `/`, it means the path is absolute). Also, only the first `~` is expanded. Anything after (like in this case) is simply treated as a string. Thus, the expanded path is `/home/hacker/~`.
 ```
