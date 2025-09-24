@@ -103,17 +103,39 @@ Correct usage! Your flag: pwn.college{QIGRZ3VlSbCJF6O33OaGLrTrPzc.QX3IDO0wyNyAzN
 
 
 ## Help for Builtins
-Some commands, rather than being program with manpages and help options, are built into the shell itself. They are called *builtins*. They are invoked just like commands, but the shell handles them internally instead of launching other programs. One such builtin is `help`. Using it without any argument will give a list of available builtins.\
 In this challenge, `challenge` is a builtin rather than a command. Lookup its help to figure out the flag.
 ### Solve
 **Flag:** `pwn.college{c5Al2h891UqSkoxeeoG5PD5ZAt3.QX0ETO0wyNyAzNzEzW}`\
 Use the provided secret value with the `--secret` flag to get the flag.
+```
+hacker@man~help-for-builtins:~$ help challenge
+challenge: challenge [--fortune] [--version] [--secret SECRET]
+    This builtin command will read you the flag, given the right arguments!
+    
+    Options:
+      --fortune         display a fortune
+      --version         display the version
+      --secret VALUE    prints the flag, if VALUE is correct
+
+    You must be sure to provide the right value to --secret. That value
+    is "c5Al2h89".
+hacker@man~help-for-builtins:~$ challenge --secret c5Al2h89
+Correct! Here is your flag!
+pwn.college{c5Al2h891UqSkoxeeoG5PD5ZAt3.QX0ETO0wyNyAzNzEzW}
+```
 
 
 
 ### New Learnings
-- `man`'s `-k` argument is a blessing.
-- About *builtins*.
+Help can be found in more than one ways if you do not know exactly what you are looking for.
+- Making use of `man` command.
+  - Makers of a command generally make a `manpage` of the same. It conatins all the information there is to learn about the command.
+- Using the `--help` flag.
+  - Even if a command does not have a `manpage`, using the `--help` flag with the command will show you how to use the command briefly.
+- Using the `help` *builtin*.
+  - *Builtins* are special commands built into the shell itself - hence the name. 
+  - They are invoked just like commands, but the shell handles them internally instead of launching other programs.
+  - One such builtin is `help`. Using it without any argument will give a list of available builtins.
 
 
 
