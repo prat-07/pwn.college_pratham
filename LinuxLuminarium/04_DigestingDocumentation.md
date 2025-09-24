@@ -111,42 +111,6 @@ Use the provided secret value with the `--secret` flag to get the flag.
 
 
 
-## Helpful Programs
-Programs not having a manpage might still tell you how to use them if invoked with the flag `--flag`. Practice reading a program's documentation with `--help`.
-### Solve
-**Flag:** `pwn.college{c5Al2h891UqSkoxeeoG5PD5ZAt3.QX0ETO0wyNyAzNzEzW}`
-- Ran the `/challenge/challenge --help` command to read about the `challenge` command.
-- `-g GIVE_THE_FLAG` will give the flag if correct value of `GIVE_THE_FLAG` is passed.
-- `-p` will print the correct value to pass into the `-g` command.
-```
-pwn.college{c5Al2h891UqSkoxeeoG5PD5ZAt3.QX0ETO0wyNyAzNzEzW}
-```
-
-
-## Help for Builtins
-Some commands, rather than being program with manpages and help options, are built into the shell itself. They are called *builtins*. They are invoked just like commands, but the shell handles them internally instead of launching other programs. One such builtin is `help`. Using it without any argument will give a list of available builtins.\
-In this challenge, `challenge` is a builtin rather than a command. Lookup its help to figure out the flag.
-### Solve
-**Flag:** `pwn.college{c5Al2h891UqSkoxeeoG5PD5ZAt3.QX0ETO0wyNyAzNzEzW}`\
-Use the provided secret value with the `--secret` argument to get the flag.
-```
-hacker@man~help-for-builtins:~$ help challenge
-challenge: challenge [--fortune] [--version] [--secret SECRET]
-    This builtin command will read you the flag, given the right arguments!
-    
-    Options:
-      --fortune         display a fortune
-      --version         display the version
-      --secret VALUE    prints the flag, if VALUE is correct
-
-    You must be sure to provide the right value to --secret. That value
-    is "c5Al2h89".
-hacker@man~help-for-builtins:~$ challenge --secret c5Al2h89
-Correct! Here is your flag!
-pwn.college{c5Al2h891UqSkoxeeoG5PD5ZAt3.QX0ETO0wyNyAzNzEzW}
-```
-
-
 ### New Learnings
 - `man`'s `-k` argument is a blessing.
 - About *builtins*.
