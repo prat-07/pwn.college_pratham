@@ -3,7 +3,7 @@
 ## Translating Characters
 In this level, `/challenge/run` will print the flag but will swap the casing of all characters (e.g., A will become a and vice-versa). Can you undo it with `tr` and get the flag?
 ### Solve
-**Flag:** `pwn.college{EJBNKobh_qJoale9d47jQQ1alnd.01MxEzNxwyNyAzNzEzW}`\
+**Flag:** `pwn.college{EJBNKobh_qJoale9d47jQQ1alnd.01MxEzNxwyNyAzNzEzW}`
 - Run the `/challenge/run` command.
 - Pipe the output to `tr`.
 - Pass arguments `[a..zA..A]` `[A..Za..z].`
@@ -17,7 +17,7 @@ pwn.college{EJBNKobh_qJoale9d47jQQ1alnd.01MxEzNxwyNyAzNzEzW}
 ## Deleting characters
 Running `/challenge/run` command will give you the flag but it will be interspersed with decoy characters. Delete them using `tr -d` and get the flag.
 ### Solve
-**Flag:** `pwn.college{wj-xk3mnD_CF4iIopQRv4P1COei.0FNxEzNxwyNyAzNzEzW}`\
+**Flag:** `pwn.college{wj-xk3mnD_CF4iIopQRv4P1COei.0FNxEzNxwyNyAzNzEzW}`
 - run the `/challenge/run` command to see the raw flag.
 - decoy characters are `%` and `^` specifically.
 - remove them.
@@ -34,7 +34,7 @@ pwn.college{wj-xk3mnD_CF4iIopQRv4P1COei.0FNxEzNxwyNyAzNzEzW}
 ## Deleting newlines
 In this challenge, we'll inject a bunch of newlines into the flag. Delete them with `tr's -d` flag and the *escaped newline* specification!
 ### Solve
-**Flag:** `pwn.college{g4mR7TL1Q-Ba18eXuyHUtfmxb9i.0VNxEzNxwyNyAzNzEzW}`\
+**Flag:** `pwn.college{g4mR7TL1Q-Ba18eXuyHUtfmxb9i.0VNxEzNxwyNyAzNzEzW}`
 - *escape sequence* represent characters that are usually hard to type using keyboard. 
 - start with `\` typically. e.g. `\n` is escape sequence for a new-line character.
 - they must be passed in *double quotes* to the `tr` command.
