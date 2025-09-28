@@ -4,7 +4,7 @@
 In this level, you must run `/challenge/pwn` and then /challenge/college, chaining them with a semicolon.
 ### Solve
 **Flag:** `pwn.college{46Hv88IIbsL-dUcWUk2YsDq2SNb.QX1UDO0wyNyAzNzEzW}`
-```bash
+```
 hacker@chaining~chaining-with-semicolons:~$ /challenge/pwn ; /challenge/college
 Yes! You chained /challenge/pwn and /challenge/college! Here is your flag:
 pwn.college{46Hv88IIbsL-dUcWUk2YsDq2SNb.QX1UDO0wyNyAzNzEzW}
@@ -15,7 +15,7 @@ pwn.college{46Hv88IIbsL-dUcWUk2YsDq2SNb.QX1UDO0wyNyAzNzEzW}
 In this challenge, you need to chain the programs `/challenge/first-success` and `/challenge/second` using the `&&` operator. Try running each command separately first to see what happens (which is that you will not get the flag). But if you chain them with `&&,` the flag will appear!
 ### Solve
 **Flag:** `pwn.college{0Ah2GIGVEWvlS5Ca8_Y6vQUM0PO.0lM0MDOxwyNyAzNzEzW}`
-```bash
+```
 hacker@chaining~building-on-success:~$ /challenge/first-success 
 hacker@chaining~building-on-success:~$ /challenge/second 
 Error: /challenge/first-success must be successfully chained with 
