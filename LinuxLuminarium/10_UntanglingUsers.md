@@ -10,7 +10,7 @@ In this challenge, switch to `root` user and provide the root password `hack-the
 - Switch user to `root` using the `su` command.
 - Write the password `hack-the-planet`.
 
-```bash
+```
 hacker@users~becoming-root-with-su:~$ ls
  COLLEGE   Desktop   PWN   a   instructions   msg   myflag   not-the-flag   processes   the-flag  '~'
 hacker@users~becoming-root-with-su:~$ cat not-the-flag 
@@ -46,7 +46,7 @@ This level simulates this story, giving you a leak of `/etc/shadow` (in `/challe
 - Using this, I acquired `zardus`' password.
 - `su` into `zardus` using the password acquired.
 - run `/challenge/run` to get the flag.
-```bash
+```
 hacker@users~cracking-passwords:~$ john /challenge/shadow-leak
 Created directory: /home/hacker/.john
 Loaded 1 password hash (crypt, generic crypt(3) [?/64])
@@ -73,7 +73,7 @@ In this level, we will give you `sudo` access, and you will use it to read the f
 - Tried to `cat` it.
 - Permission denied.
 - Run the last command again but with `sudo`.
-```bash
+```
 hacker@users~using-sudo:~$ ls -l
 total 40
 -rw-r--r-- 1 hacker hacker    4 Sep 25 15:21  COLLEGE

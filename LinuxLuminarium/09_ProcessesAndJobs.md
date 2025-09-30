@@ -254,10 +254,10 @@ pwn.college{MNuGpFZu2hml0ElcX51JkULhgI4.QX5QDO0wyNyAzNzEzW}
 ## Process Exit Codes
 In this challenge, you must retrieve the exit code returned by `/challenge/get-code` and then run `/challenge/submit-code` with that error code as an argument.
 ### Solve
-**Flag:** `pwn.college{k2qPgh0zQ3hhLOMtXAKpM5vFIdB.QX5YDO1wyNyAzNzEzW}`\
+**Flag:** `pwn.college{k2qPgh0zQ3hhLOMtXAKpM5vFIdB.QX5YDO1wyNyAzNzEzW}`
 - `?` is a builtin variable (env variable) that holds the exit code of the last executed command.
 - `echo` it using `$` to expand the `?` variable.
-```bash
+```
 hacker@processes~process-exit-codes:~$ /challenge/get-code
 Exiting with an error code!
 hacker@processes~process-exit-codes:~$ echo $?

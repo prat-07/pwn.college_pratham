@@ -83,7 +83,7 @@ _=/run/dojo/bin/env
 ## Storing Command Output
 Read the output of the `/challenge/run` command directly into a variable called `PWN`, and it will contain the flag!
 ### Solve
-**Flag:** `pwn.college{k8DQMRhtwHfNBjkLgG0hNBaavoX.QX1cDN1wyNyAzNzEzW}`\
+**Flag:** `pwn.college{k8DQMRhtwHfNBjkLgG0hNBaavoX.QX1cDN1wyNyAzNzEzW}`
 - Using *Command Substitution* assign output `/challenge/run` command to `PWN` variable.
 - `echo` the variable
 ```

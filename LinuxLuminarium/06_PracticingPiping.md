@@ -140,7 +140,7 @@ pwn.college{kdd2YG_yKG5OHEjIQnxPxcYw6gk.QX5EDO0wyNyAzNzEzW}
 ## Grepping errors
  Like the last level, this level will overwhelm you with output, but this time on standard error. `grep` through it to find the flag!
  ### Solve
- **Flag:** `pwn.college{YN8EJIowXhAlT2pk6tQxMU33ZqC.QX1ATO0wyNyAzNzEzW}`\
+ **Flag:** `pwn.college{YN8EJIowXhAlT2pk6tQxMU33ZqC.QX1ATO0wyNyAzNzEzW}`
 - `2>` means redirect the stderr.
 - `>&` will redirect one file descriptor to another.
 - Thus, we use `2>& 1` which will redirect the stderr to stdout.
@@ -171,7 +171,7 @@ pwn.college{YN8EJIowXhAlT2pk6tQxMU33ZqC.QX1ATO0wyNyAzNzEzW}
 ## Filtering with grep -v
 In this challenge, `/challenge/run` will output the flag to stdout, but it will also output over 1000 decoy flags (containing the word `DECOY` somewhere in the flag) mixed in with the real flag. You'll need to filter out the decoys while keeping the real flag!
 ### Solve
-**Flag:** `pwn.college{4M-8rt2cWyWEKs5swrkV8gyXqg4.0FOxEzNxwyNyAzNzEzW}`\
+**Flag:** `pwn.college{4M-8rt2cWyWEKs5swrkV8gyXqg4.0FOxEzNxwyNyAzNzEzW}`
 ```
 hacker@piping~filtering-with-grep-v:~$ /challenge/run | grep -v "DECOY"
 pwn.college{4M-8rt2cWyWEKs5swrkV8gyXqg4.0FOxEzNxwyNyAzNzEzW}
@@ -208,7 +208,7 @@ pwn.college{ITSBR4aE2DmorwzrzY04ZjuL0Hq.QXxITO0wyNyAzNzEzW}
 Now, you'll diff two sets of command outputs: `/challenge/print_decoys`, which will print a bunch of decoy flags, and `/challenge/print_decoys_and_flag` which will print those same decoys plus the real flag.\
 Use process substitution with `diff` to compare the outputs of these two programs and find your flag!
 ### Solve
-**Flag:** `pwn.college{srS-x3SXSQWfrKeXVo7HMt1DHaQ.0lNwMDOxwyNyAzNzEzW}`\
+**Flag:** `pwn.college{srS-x3SXSQWfrKeXVo7HMt1DHaQ.0lNwMDOxwyNyAzNzEzW}`
 - `<(command)` will create a temp file and simultaneously return its path. The file is connected to the stdin of the `command` command.
 - Thus, we `diff` these two files to find the flag.
 ```
@@ -221,7 +221,7 @@ hacker@piping~process-substitution-for-input:~$ diff <(/challenge/print_decoys) 
 ## Writing to multiple programs
 In this challenge, we have `/challenge/hack`, `/challenge/the`, and `/challenge/planet.` Run the `/challenge/hack` command, and duplicate its output as input to both the `/challenge/the` and the `/challenge/planet` commands! Scroll back through the previous challenges "Duplicating piped data with tee" and "Process substitution for input" if you need a refresher on this method.
 ### Solve
-**Flag:** `pwn.college{cZf52fhh-NWBA0tozzzKVjprCts.QXwgDN1wyNyAzNzEzW}`\
+**Flag:** `pwn.college{cZf52fhh-NWBA0tozzzKVjprCts.QXwgDN1wyNyAzNzEzW}`
 ```
 hacker@piping~writing-to-multiple-programs:~$ /challenge/hack | tee >(/challenge/the) | tee >(/challenge/planet)
 This secret data must directly and simultaneously make it to /challenge/the and 
@@ -239,7 +239,7 @@ In this challenge, you have:
 - `/challenge/the` : you must redirect hack's stderr to this program
 - `/challenge/planet` : you must redirect hack's stdout to this program
 ### Solve
-**Flag:** `pwn.college{Qs59dZfNSIcGWhNyTnY_6xQrKe0.QXxQDM2wyNyAzNzEzW}`\
+**Flag:** `pwn.college{Qs59dZfNSIcGWhNyTnY_6xQrKe0.QXxQDM2wyNyAzNzEzW}`
 - Pass stderr of first command to second one and stdout of first command to stdout of second one. I did this by using knowledge of previous challenge - *File Descriptors*.
 - And since I had to pass it to two commands, I made use of *Process Substitution*.
 ```
@@ -253,7 +253,7 @@ pwn.college{Qs59dZfNSIcGWhNyTnY_6xQrKe0.QXxQDM2wyNyAzNzEzW}
 ## Named pipes
 This challenge will be a simple introduction to FIFOs. You'll need to create a `/tmp/flag_fifo` file and redirect the stdout of `/challenge/run` to it. If you're successful, `/challenge/run` will write the flag into the FIFO! Go do it!
 ### Solve
-**Flag:** `pwn.college{cU0UqHCIzE8kZUoxmWY9CkGUSaz.01MzMDOxwyNyAzNzEzW}`\
+**Flag:** `pwn.college{cU0UqHCIzE8kZUoxmWY9CkGUSaz.01MzMDOxwyNyAzNzEzW}`
 - Create the FIFO.
 - Redirect output of `/challenge/run` to it.
 - Proccesses paused until *read* action is completed.

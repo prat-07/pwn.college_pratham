@@ -8,7 +8,7 @@ In this level, we will practice changing the owner of the `/flag` file to the ha
 - Permission denied.
 - Change ownership of the file to `hacker`.
 - Run command again.
-```bash
+```
 hacker@permissions~changing-file-ownership:~$ cat /flag
 cat: /flag: Permission denied
 hacker@permissions~changing-file-ownership:~$ chown hacker /flag
@@ -23,7 +23,7 @@ In this level, I have made the flag readable by whatever group owns it, but this
 - `ls` `/flag` permissions.
 - Change its group `hacker`.
 - `cat` it.
-```bash
+```
 hacker@permissions~groups-and-files:~$ ls
  COLLEGE   Desktop   PWN   a   instructions   msg   myflag   not-the-flag   processes   the-flag  '~'
 hacker@permissions~groups-and-files:~$ ls -l /flag
@@ -37,7 +37,7 @@ pwn.college{Ma8iEG_cGR4WBrUD0R6VSfdVWbR.QXxcjM1wyNyAzNzEzW}
 ## Fun With Group Names
 In this challenge, the my group name has been randomized. Use the `id` command to figure out the group name and change group of `/flag` file to that group.
 **Flag:** `pwn.college{0EM1IJrDzkVKWDtSUceqPMgqnQ9.QXycjM1wyNyAzNzEzW}`
-```bash
+```
 hacker@permissions~fun-with-groups-names:~$ ls -l /flag
 -r--r----- 1 root root 60 Sep 28 07:01 /flag
 hacker@permissions~fun-with-groups-names:~$ id
@@ -53,7 +53,7 @@ In this challenge, you must change the permissions of the `/flag` file to read i
 **Flag:** `pwn.college{w9UqP3mkl3lVuUOJPEfbrMG5swy.QXzcjM1wyNyAzNzEzW}`
 - `ls -l /flag` to find which owner and group the file belongs to.
 - Since it belong to root, I need `read` permission for the `other` groups.
-```bash
+```
 hacker@permissions~changing-permissions:~$ ls -l /flag
 -r-------- 1 root root 60 Sep 28 07:07 /flag
 hacker@permissions~changing-permissions:~$ chmod o+r /flag
@@ -70,7 +70,7 @@ In this challenge, the `/challenge/run` program will give you the flag, but you 
 - Belongs to `hacker` user and group.
 - Only giving executable permission to user will suffice.
 - Execute the file.
-```bash
+```
 hacker@permissions~executable-files:~$ ls -l /challenge/run
 -r--r--r-- 1 hacker hacker 32 Jan 14  2025 /challenge/run
 hacker@permissions~executable-files:~$ chmod u+x /challenge/run
@@ -543,7 +543,7 @@ Now, we are going to let you add the `SUID` bit to the `/challenge/getroot` prog
 - This lets us execute it.
 - Executing it opens a root terminal session.
 - Allowing us to cat the `/flag` file and access it contents.
-```bash
+```
 hacker@permissions~the-suid-bit:~$ cat /flag
 cat: /flag: Permission denied
 hacker@permissions~the-suid-bit:~$ chmod u+s /challenge/getroot
