@@ -46,6 +46,10 @@ decrypt = bytes(x ^ y for x, y in zip(content, cycle(key)))
 print(decrypt)
 ```
 
+## Solve
+**Flag:** `flaggg{w0w_g0od_j0b_V3ry_gr34t_amazing_AW35OMEE}`
+
+
 ## New Learnings
 - The encryption function.
 - The decryption function.
